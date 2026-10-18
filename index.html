@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>호그와트 탐험</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="game-wrap">
+    <div id="game"></div>
+    <div class="hud-stack">
+      <div id="hud" class="hud">해리 · 열쇠 0/3</div>
+      <div id="hud-room" class="hud sub"></div>
+    </div>
+    <div id="help" class="help">←↑↓→/WASD 이동 · Space/Enter 조사</div>
+    <div id="prompt" class="prompt hidden"></div>
+    <div id="toast" class="toast hidden"></div>
+
+    <div id="dialogue" class="dialogue hidden" role="dialog" aria-live="polite" aria-hidden="true">
+      <div class="dlg-name"><span id="dlg-name-text"></span><span id="dlg-badge" class="dlg-badge hidden"></span></div>
+      <div class="dlg-box">
+        <div id="dlg-text" class="dlg-text"></div>
+        <ol id="dlg-choices" class="dlg-choices hidden"></ol>
+        <div class="dlg-footer"><span id="dlg-meta"></span><span id="dlg-hint" class="dlg-hint"></span><span id="dlg-page"></span></div>
+        <div id="dlg-next" class="dlg-next hidden">▼</div>
+      </div>
+    </div>
+
+    <div id="clear" class="clear hidden" role="dialog" aria-label="클리어">
+      <div class="clear-box">
+        <div class="clear-title">✨ 필요의 방 발견! ✨</div>
+        <div class="clear-text">해리는 열쇠 3개로 필요의 방에 들어섰다.<br>호그와트 탐험 클리어!</div>
+        <div id="clear-stats" class="clear-stats"></div>
+        <button id="clear-restart" type="button">처음부터 다시 하기 (Enter)</button>
+      </div>
+    </div>
+  </div>
+  <script src="lib/phaser.min.js"></script>
+  <script src="js/assets.js"></script>
+  <script src="js/map.js"></script>
+  <script src="js/save.js"></script>
+  <script src="js/dialogue.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
